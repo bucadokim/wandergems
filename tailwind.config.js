@@ -14,7 +14,9 @@ export default {
       colors: {
         foreground: "#212529",
         background: "#FFF",
-        primary: "#C8A53F",
+        primary: "#0284C7",
+        accent: "#F97316",
+        white: "#FFFFFF",
         "muted-primary": "#F6F4ED",
         muted: "#E8E8E8",
         destructive: "#f44336",

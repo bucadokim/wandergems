@@ -1,5 +1,6 @@
-import React from "react";
 import Header from "./Header";
+import { cn } from "@/lib/utils";
+import PropTypes from "prop-types";
 
 export default function PageLayout({
   children,
@@ -7,11 +8,19 @@ export default function PageLayout({
   contentStyles,
 }) {
   return (
-    <section>
-      <div className={containerStyles}>
-        <Header />
-        {children}
+    <section className="relative">
+      <div className="item-center mx-auto flex flex-col justify-center">
+        <div className={containerStyles}>
+          <Header />
+          <div className={cn(`min-h-[680px] `, contentStyles)}>{children}</div>
+        </div>
       </div>
     </section>
   );
 }
+
+PageLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  containerStyles: PropTypes.string,
+  contentStyles: PropTypes.string,
+};

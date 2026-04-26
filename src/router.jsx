@@ -6,7 +6,8 @@ import {
 } from "@tanstack/react-router";
 import HomePage from "./pages/home/HomePage";
 import PageLayout from "./pages/layout/PageLayout";
-import ExplorePage from "./pages/explore/Explore";
+import ExplorePage from "./pages/explore/ExplorePage";
+import DiscoverPage from "./pages/discover/DiscoverPage";
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -28,7 +29,17 @@ const exploreRoute = createRoute({
   component: ExplorePage,
 });
 
-const routeTree = rootRoute.addChildren([homeRoute, exploreRoute]);
+const discoverRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/discover",
+  component: DiscoverPage,
+});
+
+const routeTree = rootRoute.addChildren([
+  homeRoute,
+  exploreRoute,
+  discoverRoute,
+]);
 
 const router = createRouter({ routeTree });
 
