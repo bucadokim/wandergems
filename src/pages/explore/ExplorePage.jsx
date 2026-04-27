@@ -1,12 +1,9 @@
-import { Button } from "@/components/ui/button";
 import React from "react";
+import Container from "../layout/Container";
 
 const ExplorePage = () => {
   return (
-    <div>
-      This is the Explore page
-      <Button className="bg-primary text-white">Click me</Button>
-    </div>
+    <Container containerStyles="py-5 px-4">This is the Explore page</Container>
   );
 };
 
