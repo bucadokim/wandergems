@@ -3,6 +3,7 @@ import Container from "./Container";
 import Nav from "./Nav";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
+import SearchInputComponent from "@/ui components/FormElements/SearchInputComponent";
 
 const Header = () => {
   return (
@@ -10,7 +11,10 @@ const Header = () => {
       <div className="mx-10 flex flex-row h-auto items-center justify-between">
         <Nav />
         <Logo imgContainerStyles="w-[100px] items-center" />
-        <Button>Plan Your Trip</Button>
+        <div className="flex flex-row  gap-x-2">
+          <SearchInputComponent />
+          <Button>Plan Your Trip</Button>
+        </div>
       </div>
     </header>
   );
