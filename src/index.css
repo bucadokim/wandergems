@@ -5,5 +5,9 @@
 
 html,
 body {
-  font-family: "Manrope", sans-serif;
+  @apply font-primary;
+}
+
+p {
+  @apply text-foreground font-primary;
 }

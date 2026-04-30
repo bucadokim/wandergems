@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       colors: {
-        foreground: "#212529",
+        foreground: "#4C4747",
         background: "#FFF",
         primary: "#0284C7",
         accent: "#F97316",
@@ -20,6 +20,10 @@ export default {
         "muted-primary": "#F6F4ED",
         muted: "#E8E8E8",
         destructive: "#f44336",
+      },
+      fontFamily: {
+        primary: ["Manrope", "sans-serif"],
+        secondary: ["Playfair Display", "serif"],
       },
     },
   },
