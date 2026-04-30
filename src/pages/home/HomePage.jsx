@@ -3,6 +3,7 @@ import Container from "../layout/Container";
 import CarouselComponent from "@/ui components/carousel/CarouselComponent";
 import PropTypes from "prop-types";
 import Section from "../layout/Section";
+import CardComponent from "@/ui components/card/CardComponent";
 
 const defaultHomePictures = [
   "https://www.floridastateparks.org/sites/default/files/styles/gallery/public/media/image/30741024_Wekiwa%20Springs%20State%20Park_New%20Perspective_Perfect%20Day%20for%20a%20Paddle_Becky_Johns%20Witek.jpg?itok=qILfEvsg",
@@ -18,7 +19,25 @@ const HomePage = ({ images = defaultHomePictures }) => {
         title="Featured Destinations"
         subtitle="Handpicked spots across Florida you won't find in typical guides."
         containerStyles="py-5 px-4"
-      ></Section>
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <CardComponent
+            title="Card 1"
+            description="Card 1 description"
+            content="Card 1 content"
+          />
+          <CardComponent
+            title="Card 2"
+            description="Card 2 description"
+            content="Card 2 content"
+          />
+          <CardComponent
+            title="Card 3"
+            description="Card 3 description"
+            content="Card 3 content"
+          />
+        </div>
+      </Section>
     </Container>
   );
 };
