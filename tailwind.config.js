@@ -20,6 +20,9 @@ export default {
         "muted-primary": "#F6F4ED",
         muted: "#E8E8E8",
         destructive: "#f44336",
+        success: "#008000",
+        warning: "#FFA500",
+        info: "#0000FF",
       },
       fontFamily: {
         primary: ["Manrope", "sans-serif"],

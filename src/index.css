@@ -9,5 +9,5 @@ body {
 }
 
 p {
-  @apply text-foreground font-primary;
+  @apply text-black font-primary;
 }

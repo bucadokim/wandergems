@@ -20,21 +20,34 @@ const HomePage = ({ images = defaultHomePictures }) => {
         subtitle="Handpicked spots across Florida you won't find in typical guides."
         containerStyles="py-5 px-4"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-15 align-center py-10 justify-center">
           <CardComponent
-            title="Card 1"
-            description="Card 1 description"
-            content="Card 1 content"
+            title="Wekiwa Springs State Park"
+            description="Apopka, Florida"
+            content="Crystal-clear springs surrounded by lush forest trails, kayaking routes, and peaceful swimming spots."
+            cardImageUrl="https://wekiwaspringsadventures.com/wp-content/uploads/2024/06/wekiwa-home.jpg"
+            badgeIds={["nature", "spring"]}
           />
           <CardComponent
-            title="Card 2"
-            description="Card 2 description"
-            content="Card 2 content"
+            title="Anna Maria Island"
+            description="Gulf Coast, Florida"
+            content="A peaceful island escape with white-sand beaches, pastel beach houses, local cafés, and stunning Gulf sunsets."
+            cardImageUrl="https://gardenandgun.com/wp-content/uploads/2025/06/Beach-Anna-Maria-Island-1100x733.jpg"
+            badgeIds={["beach"]}
           />
           <CardComponent
-            title="Card 3"
-            description="Card 3 description"
-            content="Card 3 content"
+            title="Mount Dora"
+            description="Central Florida"
+            content="A charming lakeside town filled with cozy cafés, antique shops, scenic streets, and sunset views."
+            cardImageUrl="https://webapp-discoverlakeumbraco.azurewebsites.net/media/kaojdggv/f12b3f79-7fe7-4683-9d0e-9ca89c2921f9.jpg"
+            badgeIds={["cafe", "downtown"]}
+          />
+          <CardComponent
+            title="Lake Apopka Wildlife Drive"
+            description="Apopka, Florida"
+            content="A peaceful scenic drive through wetlands filled with birds, alligators, turtles, and breathtaking Florida wildlife views."
+            cardImageUrl="https://www.sjrwmd.com/img/2025/05/20250501-lawd-drone.jpg"
+            badgeIds={["nature", "wildlife"]}
           />
         </div>
       </Section>
