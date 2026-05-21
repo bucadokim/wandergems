@@ -25,7 +25,7 @@ const CarouselComponent = ({ images }) => {
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className=" w-full  object-cover"
+                className=" w-full object-cover"
               />
             </Container>
           </CarouselItem>
