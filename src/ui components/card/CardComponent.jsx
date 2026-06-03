@@ -9,7 +9,6 @@ import PropTypes from "prop-types";
 import BadgeComponent from "../badge/BadgeComponent";
 import Container from "@/pages/layout/Container";
 import { Button } from "@/components/ui/button";
-import { TreePine } from "lucide-react";
 
 export default function CardComponent({
   title,
@@ -24,33 +23,35 @@ export default function CardComponent({
 }) {
   if (variant === "floating") {
     return (
-      <Card className="relative w-full h-full pt-20 text-center shadow-md overflow-visible border-accent border rounded-xl">
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2">
-          <div className="h-35 w-35 overflow-hidden rounded-full border-4 border-background">
-            <img
-              src={cardImageUrl}
-              alt={imageAlt}
-              width={112}
-              height={112}
-              className="h-full w-full border object-cover"
-            />
+      <div className="w-full pt-20">
+        <Card className="relative w-full h-full pt-20 text-center shadow-md overflow-visible border-accent border rounded-xl">
+          <div className="absolute -top-20 left-1/2 -translate-x-1/2">
+            <div className="h-35 w-35 overflow-hidden rounded-full border-4 border-background">
+              <img
+                src={cardImageUrl}
+                alt={imageAlt}
+                width={112}
+                height={112}
+                className="h-full w-full border object-cover"
+              />
+            </div>
           </div>
-        </div>
 
-        <CardHeader>
-          <CardTitle className="text-2xl text-foreground font-secondary ">
-            {title}
-          </CardTitle>
-        </CardHeader>
+          <CardHeader>
+            <CardTitle className="text-2xl  font-secondary ">{title}</CardTitle>
+          </CardHeader>
 
-        <CardContent className="space-y-6">
-          <CardDescription className="text-base">{description}</CardDescription>
+          <CardContent className="space-y-6">
+            <CardDescription className="text-sm text-foreground">
+              {description}
+            </CardDescription>
 
-          <Button className="w-full text-background bg-accent">
-            {buttonText}
-          </Button>
-        </CardContent>
-      </Card>
+            <Button className="w-full text-background bg-accent">
+              Explore More
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
     );
   }
 
