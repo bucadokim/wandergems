@@ -18,7 +18,7 @@ export default function Section({
         <p className="text-base text-foreground font-primary">{subtitle}</p>
       </div>
 
-      <div className={contentStyles}>{children}</div>
+      <div className={`w-full ${contentStyles || ""}`}>{children}</div>
     </section>
   );
 }

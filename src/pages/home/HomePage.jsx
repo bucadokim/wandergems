@@ -15,6 +15,7 @@ const HomePage = ({ images = defaultHomePictures }) => {
   return (
     <Container containerStyles="py-5 px-4">
       <CarouselComponent images={images} />
+      {/* FEATURED DESTINATIONS SECTION */}
       <Section
         title="Featured Destinations"
         subtitle="Handpicked spots across Florida you won't find in typical guides."
@@ -51,6 +52,50 @@ const HomePage = ({ images = defaultHomePictures }) => {
           />
         </div>
       </Section>
+      {/* FEATURED DESTINATIONS SECTION END */}
+
+      {/* CATEGORIES SECTION */}
+      <Section
+        title="Browse by Vibe"
+        subtitle="From calm springs to quiet towns—explore by how you want to feel."
+        containerStyles="py-5 px-4 "
+      >
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-stretch pt-28 pb-10 justify-center">
+          <CardComponent
+            variant="floating"
+            title="Health Kitchen Family Meals"
+            description="Perfect meals to share"
+            cardImageUrl="https://webapp-discoverlakeumbraco.azurewebsites.net/media/kaojdggv/f12b3f79-7fe7-4683-9d0e-9ca89c2921f9.jpg"
+            imageAlt="Mount Dora"
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="floating"
+            title="Health Kitchen Family Meals"
+            description="Perfect meals to share"
+            cardImageUrl="https://webapp-discoverlakeumbraco.azurewebsites.net/media/kaojdggv/f12b3f79-7fe7-4683-9d0e-9ca89c2921f9.jpg"
+            imageAlt="Mount Dora"
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="floating"
+            title="Health Kitchen Family Meals"
+            description="Perfect meals to share"
+            cardImageUrl="https://webapp-discoverlakeumbraco.azurewebsites.net/media/kaojdggv/f12b3f79-7fe7-4683-9d0e-9ca89c2921f9.jpg"
+            imageAlt="Mount Dora"
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="floating"
+            title="Health Kitchen Family Meals"
+            description="Perfect meals to share"
+            cardImageUrl="https://webapp-discoverlakeumbraco.azurewebsites.net/media/kaojdggv/f12b3f79-7fe7-4683-9d0e-9ca89c2921f9.jpg"
+            imageAlt="Mount Dora"
+            buttonText="Explore More"
+          />
+        </div>
+      </Section>
+      {/* CATEGORIES SECTION END */}
     </Container>
   );
 };
