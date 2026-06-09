@@ -24,7 +24,7 @@ export default function CardComponent({
   if (variant === "floating") {
     return (
       <div className="w-full pt-20">
-        <Card className="relative w-full h-full pt-20 text-center shadow-md overflow-visible border-accent border rounded-xl">
+        <Card className="relative w-full flex flex-col h-full min-h-[250px] pt-20 text-center shadow-md overflow-visible border-accent border rounded-xl">
           <div className="absolute -top-20 left-1/2 -translate-x-1/2">
             <div className="h-35 w-35 overflow-hidden rounded-full border-4 border-background">
               <img
@@ -46,7 +46,7 @@ export default function CardComponent({
               {description}
             </CardDescription>
 
-            <Button className="w-full text-background bg-accent">
+            <Button onClick className="w-full text-background bg-accent">
               Explore More
             </Button>
           </CardContent>

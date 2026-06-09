@@ -60,7 +60,7 @@ const HomePage = ({ images = defaultHomePictures }) => {
         subtitle="From calm springs to quiet towns—explore by how you want to feel."
         containerStyles="py-5 px-4 "
       >
-        <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-center pb-10 justify-center">
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch pb-10 justify-center">
           <CardComponent
             variant="floating"
             title="Nature & Springs"
