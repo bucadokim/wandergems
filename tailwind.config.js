@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       colors: {
-        foreground: "#4C4747",
+        foreground: "#3B3535",
         background: "#FFF",
         primary: "#0284C7",
         accent: "#F97316",

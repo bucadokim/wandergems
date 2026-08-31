@@ -6,17 +6,25 @@ export default function Section({
   children,
   containerStyles,
   contentStyles,
+
+  showHeader = true,
 }) {
   return (
     <section
-      className={`${containerStyles} pt-10 flex flex-col gap-4 items-center justify-center `}
+      className={`${containerStyles} pt-10 flex flex-col gap-4 items-start justify-start `}
     >
-      <div className="flex flex-col gap-4 items-center justify-center text-center">
-        <h1 className="text-7xl text-foreground font-secondary font-medium">
-          {title}
-        </h1>
-        <p className="text-base text-foreground font-primary">{subtitle}</p>
-      </div>
+      {showHeader && (title || subtitle) && (
+        <div className="flex flex-col gap-4 items-start border-l-5 border-accent px-5 justify-start text-center">
+          {title && (
+            <h1 className="text-6xl text-foreground font-secondary font-medium">
+              {title}
+            </h1>
+          )}
+          {subtitle && (
+            <p className="text-base text-foreground font-primary">{subtitle}</p>
+          )}
+        </div>
+      )}
 
       <div className={`w-full ${contentStyles || ""}`}>{children}</div>
     </section>
@@ -24,9 +32,10 @@ export default function Section({
 }
 
 Section.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   containerStyles: PropTypes.string,
   contentStyles: PropTypes.string,
+  showHeader: PropTypes.bool,
 };
