@@ -21,13 +21,14 @@ const HomePage = ({ images = defaultHomePictures }) => {
         subtitle="Handpicked spots across Florida you won't find in typical guides."
         containerStyles="py-5 px-4"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-15 align-center py-10 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 px-15 align-center py-10 justify-center">
           <CardComponent
             title="Wekiwa Springs State Park"
             description="Apopka, Florida"
             content="Crystal-clear springs surrounded by lush forest trails, kayaking routes, and peaceful swimming spots."
             cardImageUrl="https://wekiwaspringsadventures.com/wp-content/uploads/2024/06/wekiwa-home.jpg"
             badgeIds={["nature", "spring"]}
+            buttonText="Explore"
           />
           <CardComponent
             title="Anna Maria Island"
@@ -35,6 +36,7 @@ const HomePage = ({ images = defaultHomePictures }) => {
             content="A peaceful island escape with white-sand beaches, pastel beach houses, local cafés, and stunning Gulf sunsets."
             cardImageUrl="https://gardenandgun.com/wp-content/uploads/2025/06/Beach-Anna-Maria-Island-1100x733.jpg"
             badgeIds={["beach"]}
+            buttonText="Explore"
           />
           <CardComponent
             title="Mount Dora"
@@ -42,6 +44,7 @@ const HomePage = ({ images = defaultHomePictures }) => {
             content="A charming lakeside town filled with cozy cafés, antique shops, scenic streets, and sunset views."
             cardImageUrl="https://webapp-discoverlakeumbraco.azurewebsites.net/media/kaojdggv/f12b3f79-7fe7-4683-9d0e-9ca89c2921f9.jpg"
             badgeIds={["cafe", "downtown"]}
+            buttonText="Explore"
           />
           <CardComponent
             title="Lake Apopka Wildlife Drive"
@@ -49,18 +52,75 @@ const HomePage = ({ images = defaultHomePictures }) => {
             content="A peaceful scenic drive through wetlands filled with birds, alligators, turtles, and breathtaking Florida wildlife views."
             cardImageUrl="https://www.sjrwmd.com/img/2025/05/20250501-lawd-drone.jpg"
             badgeIds={["nature", "wildlife"]}
+            buttonText="Explore"
+          />
+          <CardComponent
+            title="Lake Apopka Wildlife Drive"
+            description="Apopka, Florida"
+            content="A peaceful scenic drive through wetlands filled with birds, alligators, turtles, and breathtaking Florida wildlife views."
+            cardImageUrl="https://www.sjrwmd.com/img/2025/05/20250501-lawd-drone.jpg"
+            badgeIds={["nature", "wildlife"]}
+            buttonText="Explore"
           />
         </div>
       </Section>
       {/* FEATURED DESTINATIONS SECTION END */}
 
+      {/* DISCOVER EXPERIENCES SECTION START */}
+      <Section title="Discover Experiences" containerStyles="py-5 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-15 py-10">
+          <CardComponent
+            variant="news"
+            title="Blue Spring State Park Requires Reservations Starting July 15"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="Visitors planning a summer trip should reserve their day-use pass in advance as the park introduces a new reservation system to improve the visitor experience."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+        </div>
+      </Section>
+
       {/* CATEGORIES SECTION */}
       <Section
-        title="Browse by Vibe"
+        title="Choose Your Vibe"
         subtitle="From calm springs to quiet towns—explore by how you want to feel."
         containerStyles="py-5 px-4 "
       >
-        <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch pb-10 justify-center">
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center pb-10 justify-center">
           <CardComponent
             variant="floating"
             title="Nature & Springs"
