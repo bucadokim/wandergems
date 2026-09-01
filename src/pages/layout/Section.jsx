@@ -16,7 +16,7 @@ export default function Section({
       {showHeader && (title || subtitle) && (
         <div className="flex flex-col gap-4 items-start border-l-5 border-accent px-5 justify-start text-center">
           {title && (
-            <h1 className="text-6xl text-foreground font-secondary font-medium">
+            <h1 className="text-5xl text-foreground font-secondary font-medium">
               {title}
             </h1>
           )}

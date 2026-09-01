@@ -66,9 +66,57 @@ const HomePage = ({ images = defaultHomePictures }) => {
       </Section>
       {/* FEATURED DESTINATIONS SECTION END */}
 
+      {/* DISCOVER EXPERIENCES SECTION START */}
+      <Section title="Discover Experiences" containerStyles="py-5 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-15 py-10">
+          <CardComponent
+            variant="news"
+            title="Blue Spring State Park Requires Reservations Starting July 15"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="Visitors planning a summer trip should reserve their day-use pass in advance as the park introduces a new reservation system to improve the visitor experience."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+          <CardComponent
+            variant="news"
+            title="Summer Sunsets Light Up Florida's East Coast"
+            cardImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQsDvUJ9jut-sqyrjW7peAfUac0Uo2jVj3w&s"
+            description="From New Smyrna Beach to St. Augustine, coastal destinations are drawing photographers with spectacular evening skies this season."
+            buttonText="Explore More"
+          />
+        </div>
+      </Section>
+
       {/* CATEGORIES SECTION */}
       <Section
-        title="Browse by Vibe"
+        title="Choose Your Vibe"
         subtitle="From calm springs to quiet towns—explore by how you want to feel."
         containerStyles="py-5 px-4 "
       >

@@ -13,8 +13,8 @@ export default {
     extend: {
       colors: {
         foreground: "#3B3535",
-        background: "#FFF",
-        primary: "#0284C7",
+        background: "#F6EEEE",
+        primary: "#FF8411",
         accent: "#F97316",
         white: "#FFFFFF",
         "muted-primary": "#F6F4ED",

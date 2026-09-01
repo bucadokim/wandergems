@@ -5,11 +5,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon, CompassIcon } from "lucide-react";
 import PropTypes from "prop-types";
 import BadgeComponent from "../badge/BadgeComponent";
 import Container from "@/pages/layout/Container";
-import { Button } from "@/components/ui/button";
-import { ArrowRightIcon, CompassIcon } from "lucide-react";
 
 export default function CardComponent({
   title,
@@ -20,12 +20,12 @@ export default function CardComponent({
   badgeId,
   badgeIds,
   variant = "default",
-  buttonText = buttonText,
+  buttonText,
 }) {
   if (variant === "floating") {
     return (
       <div className="w-full pt-20">
-        <Card className="relative w-full flex flex-col align-items-stretch h-full min-h-62.5 pt-20 text-center shadow-md overflow-visible border-accent border rounded-xl">
+        <Card className="relative flex h-full min-h-62.5 w-full flex-col items-stretch overflow-visible rounded-xl border border-accent pt-20 text-center shadow-md">
           <div className="absolute -top-20 left-1/2 -translate-x-1/2">
             <div className="h-35 w-35 overflow-hidden rounded-full border-4 border-background">
               <img
@@ -39,7 +39,7 @@ export default function CardComponent({
           </div>
 
           <CardHeader>
-            <CardTitle className="text-2xl  font-secondary ">{title}</CardTitle>
+            <CardTitle className="text-2xl font-secondary">{title}</CardTitle>
           </CardHeader>
 
           <CardContent className="space-y-6">
@@ -47,7 +47,7 @@ export default function CardComponent({
               {description}
             </CardDescription>
 
-            <Button onClick className="w-full text-background bg-accent">
+            <Button className="w-full bg-accent text-background">
               {buttonText}
             </Button>
           </CardContent>
@@ -56,17 +56,52 @@ export default function CardComponent({
     );
   }
 
+  if (variant === "news") {
+    return (
+      <Card className="relative h-full w-full gap-0 overflow-hidden   py-0 shadow-md">
+        <div className="flex h-full flex-row">
+          <div className="h-35 w-45 shrink-0 overflow-hidden sm:h-full">
+            <img
+              src={cardImageUrl}
+              alt={imageAlt}
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <div className="flex h-full flex-col p-4">
+            <CardHeader className="p-0">
+              <CardTitle className="text-base font-bold leading-tight">
+                {title}
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent className="mt-3 flex flex-1 flex-col px-0">
+              <CardDescription className="text-sm text-foreground">
+                {description}
+              </CardDescription>
+
+              <Button className="absolute p-5 bottom-3 right-3 self-end  text-background bg-primary ">
+                {buttonText}
+                <ArrowRightIcon size={4} />
+              </Button>
+            </CardContent>
+          </div>
+        </div>
+      </Card>
+    );
+  }
+
   return (
-    <Card className="relative w-full h-full overflow-visible shadow-md">
+    <Card className="relative h-full w-full overflow-visible bg-background shadow-md">
       <img
         src={cardImageUrl}
         alt={imageAlt}
-        className="relative  aspect-video w-full object-cover "
+        className="relative aspect-video w-full object-cover"
       />
       <CardHeader>
-        <CardTitle className="text-basefont-bold">{title}</CardTitle>
+        <CardTitle className="text-base font-bold">{title}</CardTitle>
         <Container contentStyles="flex flex-col gap-2">
-          <CardDescription className=" text-sm font-medium">
+          <CardDescription className="text-sm font-medium">
             {description}
           </CardDescription>
           <CardDescription className="text-xs text-foreground">
@@ -74,11 +109,9 @@ export default function CardComponent({
           </CardDescription>
         </Container>
       </CardHeader>
-      <CardContent>
-        {/* <BadgeComponent badgeId={badgeId} badgeIds={badgeIds} /> */}
-      </CardContent>
-      <Button className="absolute -right-4 -bottom-4 z-1 p-5 bg-foreground text-background shadow-lg">
-        <CompassIcon className="w-4 h-4" />
+      <CardContent></CardContent>
+      <Button className="absolute -right-4 -bottom-4 z-1 bg-foreground p-5 text-background shadow-lg">
+        <CompassIcon className="h-4 w-4" />
         {buttonText}
       </Button>
     </Card>
@@ -94,5 +127,5 @@ CardComponent.propTypes = {
   buttonText: PropTypes.string,
   imageAlt: PropTypes.string,
   cardImageUrl: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(["default", "floating"]),
+  variant: PropTypes.oneOf(["default", "floating", "news"]),
 };
